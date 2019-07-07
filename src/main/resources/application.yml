@@ -1,0 +1,10 @@
+spring:
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      maxFileSize: 10MB
+      maxRequestSize: 10MB
+
+web:
+  maxUploadSize: 10MB

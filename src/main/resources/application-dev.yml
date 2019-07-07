@@ -1,0 +1,29 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /dream-start
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    initialSize: 10
+    maxActive: 100
+    password: rootroot
+    url: jdbc:mysql://localhost:3306/herblink_admin?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+    username: root
+    validationQuery: SELECT 'x' FROM DUAL
+  profiles: dev
+  redis:
+    keyPrefix: spoc
+    database: 0
+    host: 127.0.0.1
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 500
+        max-total: 60000
+        max-wait: -1
+        min-idle: 0
+        testOnBorrow: 'true '
+    port: 6379
+    timeout: 0
